@@ -1,55 +1,87 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: N/A (initial) -> 1.0.0
+List of modified principles:
+- P1. Accuracy through verified and up-to-date robotics + AI research: Defined.
+- P2. Clarity for learners in computer science, AI and robotics: Defined.
+- P3. Modularity and maintainability for Docusaurus-based documentation: Defined.
+- P4. Reproducibility: every technical explanation and example must be traceable: Defined.
+- P5. Engineering-driven writing: define specs first, generate content from specs using Spec-Kit Plus and Claude Code: Defined.
+Added sections:
+- Key Standards
+- Tooling Constraints
+- Content Constraints
+- Success Criteria
+Removed sections:
+- None
+Templates requiring updates:
+- .specify/templates/plan-template.md: ⚠ pending
+- .specify/templates/spec-template.md: ⚠ pending
+- .specify/templates/tasks-template.md: ⚠ pending
+- .specify/templates/commands/*.md: ⚠ pending
+Follow-up TODOs:
+- Review and update .specify/templates/plan-template.md for alignment.
+- Review and update .specify/templates/spec-template.md for alignment.
+- Review and update .specify/templates/tasks-template.md for alignment.
+- Review and update command files in .specify/templates/commands/*.md for alignment.
+-->
+# AI-Humanoid-Robotics — Spec-Driven Book Creation using Docusaurus & GitHub Pages Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### P1. Accuracy through verified and up-to-date robotics + AI research
+Accuracy through verified and up-to-date robotics + AI research
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### P2. Clarity for learners in computer science, AI and robotics
+Clarity for learners in computer science, AI, and robotics
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### P3. Modularity and maintainability for Docusaurus-based documentation
+Modularity and maintainability for Docusaurus-based documentation
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### P4. Reproducibility: every technical explanation and example must be traceable
+Reproducibility: every technical explanation and example must be traceable
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
-
-### [PRINCIPLE_6_NAME]
+### P5. Engineering-driven writing: define specs first, generate content from specs using Spec-Kit Plus and Claude Code
+Engineering-driven writing: define specs first, generate content from specs using Spec-Kit Plus and Claude Code
 
 
-[PRINCIPLE__DESCRIPTION]
+## Key Standards
+- All factual claims must be sourced from reputable robotics/AI research (IEEE, ACM, arXiv, manufacturer docs, scholarly books)
+- Citation format: Markdown footnotes or Docusaurus-compatible references
+- Writing style: technical yet readable (Flesch-Kincaid grade 10–14)
+- Code examples must follow robotics/AI conventions and be lint-clean
+- Book structure must align with Docusaurus best practices (versioning, sidebar, modular docs)
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Tooling Constraints
+- Writing and structure generated via Spec-Kit Plus
+- Code reasoning, refactoring, and automation through Claude Code
+- Output must be fully compatible with Docusaurus static site build
+- Final deployment to GitHub Pages using CI/CD or manual build
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Content Constraints
+- Minimum 12 chapters covering:
+  - Foundations of humanoid robotics
+  - AI systems powering humanoids
+  - Sensors, actuators, locomotion
+  - Human–robot interaction
+  - Applied robotics (industry, healthcare, defense)
+  - Future directions and ethics
+- Include diagrams, tables, and code snippets where useful
+- All chapters must include specs, summaries, and learning outcomes
+- Total content length: equivalent to 80–120 Docusaurus pages
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Success Criteria
+- Book builds successfully in Docusaurus without warnings
+- All sources traceable and properly cited
+- Clear teaching-quality explanations backed by research
+- Fully deployable GitHub Pages site with clean navigation and versioning
+- Consistent spec-driven workflow followed across the entire project
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+- Constitution supersedes all other practices and documentation.
+- Amendments require a formal review process, documentation of rationale, and a clear migration plan for any affected systems or processes.
+- All Pull Requests (PRs) and code reviews MUST verify compliance with the principles and standards outlined in this constitution.
+- Complexity must always be justified with clear reasoning and a demonstrated need.
+- Use `.specify/memory/constitution.md` for runtime development guidance.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06

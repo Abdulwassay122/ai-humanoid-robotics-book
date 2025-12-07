@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chapter Metadata Schema",
+  "description": "Schema for validating chapter front matter and metadata in the AI-Humanoid-Robotics book.",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "module_id",
+    "created_date",
+    "last_updated_date"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the chapter (e.g., 'ros2-nodes-topics').",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "description": "Main title of the chapter."
+    },
+    "module_id": {
+      "type": "string",
+      "description": "Identifier of the module this chapter belongs to.",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "short_description": {
+      "type": "string",
+      "description": "A brief summary of the chapter content."
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the chapter was first created (YYYY-MM-DD)."
+    },
+    "last_updated_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the chapter was last updated (YYYY-MM-DD)."
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of authors for the chapter."
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Keywords relevant to the chapter content."
+    },
+    "learning_outcomes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Measurable learning objectives for the chapter."
+    },
+    "mini_project_id": {
+      "type": "string",
+      "description": "Optional ID of a mini-project associated with the chapter."
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {"type": "string"},
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          }
+        },
+        "required": ["title", "id"]
+      },
+      "description": "Outline of main sections within the chapter."
+    }
+  },
+  "additionalProperties": false
+}

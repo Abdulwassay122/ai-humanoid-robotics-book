@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(__NEW_LINE__ .specify/scripts/bash/create-phr.sh --title \"Amend constitution to v1.0.0\" --stage constitution --json)",
+      "Bash(git fetch:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(npm init:*)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1:*)",
+      "Bash(ls:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
