@@ -6,7 +6,13 @@
       "Bash(powershell.exe:*)",
       "Bash(npm init:*)",
       "Bash(.specify/scripts/powershell/check-prerequisites.ps1:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(dir \"F:\\Quater  04 Hackathon 01\\ai-humanoid-robotics-book02\\specs\\001-humanoid-robotics-book\\checklists\" /B)",
+      "Bash(dir \"F:\\Quater  04 Hackathon 01\\ai-humanoid-robotics-book02\\specs\\001-humanoid-robotics-book\\contracts\" /B)",
+      "Bash(npm run build)",
+      "Bash(npm run start)",
+      "Bash(npx docusaurus serve)",
+      "Bash(pkill -f \"docusaurus\")"
     ],
     "deny": [],
     "ask": []

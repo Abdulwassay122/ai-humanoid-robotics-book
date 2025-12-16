@@ -2,46 +2,41 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction to AI-Humanoid-Robotics Book
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to the comprehensive guide on **Physical AI and Humanoid Robotics**. This book covers the complete journey from theoretical foundations to building an autonomous humanoid robot using ROS 2, NVIDIA Isaac, and Vision-Language-Action (VLA) pipelines.
+
+## About This Book
+
+This book is designed for AI engineers, roboticists, students, and enthusiasts who want to understand and build humanoid robots. You'll learn:
+
+- The theoretical foundations of Physical AI and embodied intelligence
+- How to build ROS 2 packages for humanoid robot control using `rclpy`
+- Digital twin simulation environments with Gazebo and Unity
+- NVIDIA Isaac integration for advanced AI-robot capabilities
+- Vision-Language-Action (VLA) pipelines for natural language robot control
+- Humanoid robotics engineering principles (kinematics, dynamics, locomotion)
+- Complete capstone project: an autonomous humanoid robot
+
+## What You'll Need
+
+- **Hardware**: RTX-enabled workstation for Isaac Sim, optional Jetson Orin for edge deployment
+- **Software**: Ubuntu 22.04, ROS 2 (latest distribution), NVIDIA Isaac Sim/Isaac ROS
+- **Skills**: Basic Python knowledge, familiarity with AI/ML concepts (helpful but not required)
+
+## Book Structure
+
+The book is organized into 8 parts, each building on the previous:
+
+1. **Physical AI Foundations** - Understanding embodied intelligence and the transition from digital to physical AI
+2. **ROS 2 for Humanoids** - Building ROS 2 packages and controlling humanoid robots
+3. **Digital Twin Simulation** - Setting up simulation environments with Gazebo and Unity
+4. **AI-Robot Brain with NVIDIA Isaac** - Isaac Sim, Omniverse tools, and navigation pipelines
+5. **Vision-Language-Action Robotics** - Natural language control and cognitive planning
+6. **Humanoid Robotics Engineering** - Kinematics, dynamics, and bipedal locomotion
+7. **Capstone Project** - Complete autonomous humanoid implementation
+8. **Hardware & Lab Specifications** - Practical setup recommendations
 
 ## Getting Started
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Ready to begin your journey into humanoid robotics? Start with Part I to understand the theoretical foundations of Physical AI and embodied intelligence, then progress through each part to build your knowledge systematically.

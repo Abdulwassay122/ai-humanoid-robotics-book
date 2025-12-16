@@ -22,13 +22,13 @@
 
 **Purpose**: Initialize Docusaurus project, configure basic structure, and ensure build readiness.
 
-- [ ] T001 Create Docusaurus project if not already initialized at project root (`npm init docusaurus`)
-- [ ] T002 Configure `docusaurus.config.js` with project metadata, title, and initial sidebar structure
-- [ ] T003 [P] Create initial `sidebars.js` for main navigation and versioning strategy
-- [ ] T004 [P] Establish `docs/intro.md` as the initial landing page/introduction
-- [ ] T005 [P] Create `static/diagrams/` and `static/img/` directories for media assets
-- [ ] T006 Verify Docusaurus builds cleanly (`npm run build`) and serves (`npm run start`)
-- [ ] T007 Integrate `chapter_schema.json` into content validation workflow (e.g., pre-commit hook or build script) `specs/001-humanoid-robotics-book/contracts/chapter_schema.json`
+- [X] T001 Create Docusaurus project if not already initialized at project root (`npm init docusaurus`)
+- [X] T002 Configure `docusaurus.config.js` with project metadata, title, and initial sidebar structure
+- [X] T003 [P] Create initial `sidebars.js` for main navigation and versioning strategy
+- [X] T004 [P] Establish `docs/intro.md` as the initial landing page/introduction
+- [X] T005 [P] Create `static/diagrams/` and `static/img/` directories for media assets
+- [X] T006 Verify Docusaurus builds cleanly (`npm run build`) and serves (`npm run start`)
+- [X] T007 Integrate `chapter_schema.json` into content validation workflow (e.g., pre-commit hook or build script) `specs/001-humanoid-robotics-book/contracts/chapter_schema.json`
 
 ---
 
@@ -38,12 +38,12 @@
 
 **⚠️ CRITICAL**: No detailed chapter writing can begin until this phase is complete.
 
-- [ ] T008 Outline main `docs/` directory structure for Parts I-VIII as defined in `plan.md` (e.g., `docs/part-i-foundations/`, `docs/part-ii-ros2/`)
-- [ ] T009 Create a blank placeholder Markdown file for each core chapter within the respective `docs/part-x/` directories, based on the `spec.md` and `plan.md` section structure.
-- [ ] T010 Define internal content authoring guidelines in a new `docs/authoring-guide.md` file, covering Markdown conventions, code block formatting, and diagram embedding.
-- [ ] T011 Document the APA citation style (as per `constitution.md`) and how it should be implemented in Docusaurus Markdown in `docs/citation-guide.md`.
-- [ ] T012 Confirm `research.md` is complete and covers all key decisions (`specs/001-humanoid-robotics-book/research.md`)
-- [ ] T013 Finalize the `data-model.md` for content entities (`specs/001-humanoid-robotics-book/data-model.md`)
+- [X] T008 Outline main `docs/` directory structure for Parts I-VIII as defined in `plan.md` (e.g., `docs/part-i-foundations/`, `docs/part-ii-ros2/`)
+- [X] T009 Create a blank placeholder Markdown file for each core chapter within the respective `docs/part-x/` directories, based on the `spec.md` and `plan.md` section structure.
+- [X] T010 Define internal content authoring guidelines in a new `docs/authoring-guide.md` file, covering Markdown conventions, code block formatting, and diagram embedding.
+- [X] T011 Document the APA citation style (as per `constitution.md`) and how it should be implemented in Docusaurus Markdown in `docs/citation-guide.md`.
+- [X] T012 Confirm `research.md` is complete and covers all key decisions (`specs/001-humanoid-robotics-book/research.md`)
+- [X] T013 Finalize the `data-model.md` for content entities (`specs/001-humanoid-robotics-book/data-model.md`)
 
 **Checkpoint**: Core book structure and authoring foundations are ready. Detailed chapter content generation can now begin, potentially in parallel for different modules.
 
