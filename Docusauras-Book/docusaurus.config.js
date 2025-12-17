@@ -74,9 +74,39 @@ const config = {
     ],
   ],
 
+  plugins: [
+    // Performance and optimization plugins
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        fromExtensions: ["html", "htm"],
+        redirects: [],
+      },
+    ],
+    // SEO: Sitemap plugin
+    [
+      "@docusaurus/plugin-sitemap",
+      {
+        changefreq: "weekly",
+        priority: 0.5,
+        filename: "sitemap.xml",
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // SEO and meta tags configuration
+      metadata: [
+        { name: 'keywords', content: 'ai, humanoid, robotics, documentation, guide, tutorial' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@airobotics' },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:locale', content: 'en_US' },
+        { name: 'og:site_name', content: 'AI-Humanoid-Robotics Book' },
+      ],
+
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       colorMode: {

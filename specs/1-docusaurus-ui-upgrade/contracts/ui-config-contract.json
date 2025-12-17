@@ -1,0 +1,134 @@
+# UI Configuration Contract
+
+## Overview
+This contract defines the configuration structure for the upgraded Docusaurus UI components.
+
+## Theme Configuration Schema
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "colors": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "string",
+          "format": "color-hex",
+          "description": "Primary brand color"
+        },
+        "secondary": {
+          "type": "string",
+          "format": "color-hex",
+          "description": "Secondary brand color"
+        },
+        "background": {
+          "type": "string",
+          "format": "color-hex",
+          "description": "Background color"
+        },
+        "text": {
+          "type": "string",
+          "format": "color-hex",
+          "description": "Primary text color"
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "properties": {
+        "fontFamily": {
+          "type": "string",
+          "description": "Primary font family"
+        },
+        "baseFontSize": {
+          "type": "string",
+          "pattern": "^\\d+rem$",
+          "description": "Base font size"
+        },
+        "scale": {
+          "type": "object",
+          "properties": {
+            "sm": {"type": "string"},
+            "base": {"type": "string"},
+            "lg": {"type": "string"},
+            "xl": {"type": "string"},
+            "2xl": {"type": "string"},
+            "3xl": {"type": "string"}
+          }
+        }
+      }
+    },
+    "spacing": {
+      "type": "object",
+      "properties": {
+        "unit": {
+          "type": "number",
+          "description": "Base spacing unit in pixels"
+        },
+        "scales": {
+          "type": "object",
+          "description": "Spacing scale multipliers"
+        }
+      }
+    },
+    "breakpoints": {
+      "type": "object",
+      "properties": {
+        "sm": {"type": "string", "pattern": "^\\d+px$"},
+        "md": {"type": "string", "pattern": "^\\d+px$"},
+        "lg": {"type": "string", "pattern": "^\\d+px$"},
+        "xl": {"type": "string", "pattern": "^\\d+px$"}
+      }
+    }
+  }
+}
+```
+
+## Navigation Configuration Schema
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "mobileMenu": {
+      "type": "object",
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "breakpoint": {"type": "string"}
+      }
+    },
+    "sidebar": {
+      "type": "object",
+      "properties": {
+        "collapsible": {"type": "boolean"},
+        "autoCollapse": {"type": "boolean"}
+      }
+    }
+  }
+}
+```
+
+## Component Configuration Schema
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "buttons": {
+      "type": "object",
+      "properties": {
+        "rounded": {"type": "string"},
+        "size": {"type": "string"}
+      }
+    },
+    "cards": {
+      "type": "object",
+      "properties": {
+        "shadow": {"type": "string"},
+        "rounded": {"type": "string"}
+      }
+    }
+  }
+}
+```

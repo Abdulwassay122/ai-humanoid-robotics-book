@@ -12,7 +12,10 @@
       "Bash(npm run build)",
       "Bash(npm run start)",
       "Bash(npx docusaurus serve)",
-      "Bash(pkill -f \"docusaurus\")"
+      "Bash(pkill -f \"docusaurus\")",
+      "Bash(git checkout -b 1-docusaurus-ui-upgrade)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)",
+      "Bash(npm install @tailwindcss/postcss)"
     ],
     "deny": [],
     "ask": []
