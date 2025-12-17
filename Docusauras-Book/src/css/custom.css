@@ -1,0 +1,763 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2962ff; /* Modern blue primary */
+  --ifm-color-primary-dark: #0039cb;
+  --ifm-color-primary-darker: #0036bf;
+  --ifm-color-primary-darkest: #002ba3;
+  --ifm-color-primary-light: #5887ff;
+  --ifm-color-primary-lighter: #7a9dff;
+  --ifm-color-primary-lightest: #a4c0ff;
+  --ifm-color-secondary: #6200ea; /* Purple secondary */
+  --ifm-color-success: #00c853; /* Green for success */
+  --ifm-color-info: #304ffe; /* Blue for info */
+  --ifm-color-warning: #ffab00; /* Orange for warning */
+  --ifm-color-danger: #ff1744; /* Red for danger */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Spacing scale */
+  --ifm-spacing-unit: 1rem;
+  /* Typography */
+  --ifm-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.6;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #7a9dff;
+  --ifm-color-primary-dark: #5887ff;
+  --ifm-color-primary-darker: #4a7bff;
+  --ifm-color-primary-darkest: #2962ff;
+  --ifm-color-primary-light: #a4c0ff;
+  --ifm-color-primary-lighter: #b9d1ff;
+  --ifm-color-primary-lightest: #e6eeff;
+  --ifm-color-secondary: #7c4dff;
+  --ifm-color-success: #00e676;
+  --ifm-color-info: #536dfe;
+  --ifm-color-warning: #ffd600;
+  --ifm-color-danger: #ff5252;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Cross-browser compatibility fixes */
+@supports (-webkit-appearance: none) {
+  /* Safari/WebKit specific fixes */
+  .navbar__search-input {
+    -webkit-appearance: none;
+  }
+}
+
+@supports (-moz-appearance: none) {
+  /* Firefox specific fixes */
+  .navbar__search-input {
+    -moz-appearance: none;
+  }
+}
+
+/* Base styling that maintains Docusaurus compatibility */
+:root {
+  /* Maintain Docusaurus CSS variables for compatibility */
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.6;
+  --ifm-spacing-unit: 1rem;
+  --ifm-global-radius: 8px;
+  --ifm-global-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ifm-global-shadow-lw: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-tl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Flexbox fallbacks for older browsers */
+.card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* Enhanced button styles with touch-friendly sizing and cross-browser compatibility */
+.button {
+  border-radius: var(--ifm-global-radius);
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+  min-height: 44px;
+  min-width: 44px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.button:hover {
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+/* Touch-friendly navigation elements */
+.navbar__link {
+  padding: 0.75rem 1rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__link:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
+}
+
+/* Touch-friendly mobile menu close button */
+.navbar-mobile-close {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Touch-friendly table of contents */
+.table-of-contents__link {
+  padding: 0.5rem 0.75rem;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.table-of-contents__link:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* Touch-friendly pagination */
+.pagination-nav__link {
+  padding: 1rem;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* Touch-friendly sidebar */
+.menu__list-item {
+  min-height: 44px;
+}
+
+.menu__link {
+  padding: 0.75rem 1rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* Enhanced card styles */
+.card {
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Improved typography */
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.markdown h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.5rem;
+  color: var(--ifm-heading-color);
+}
+
+.markdown h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.3rem;
+}
+
+.markdown h3 {
+  font-size: 1.5rem;
+}
+
+.markdown h4 {
+  font-size: 1.25rem;
+}
+
+.markdown h5 {
+  font-size: 1.1rem;
+}
+
+.markdown h6 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive typography scaling */
+@media (max-width: 996px) {
+  .markdown h1 {
+    font-size: 2rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.75rem;
+  }
+
+  .markdown h3 {
+    font-size: 1.375rem;
+  }
+
+  .markdown h4 {
+    font-size: 1.125rem;
+  }
+
+  .markdown h5 {
+    font-size: 1rem;
+  }
+
+  .markdown h6 {
+    font-size: 0.85rem;
+  }
+
+  .markdown p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .markdown h1 {
+    font-size: 1.75rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.5rem;
+  }
+
+  .markdown h3 {
+    font-size: 1.25rem;
+  }
+
+  .markdown h4 {
+    font-size: 1.1rem;
+  }
+
+  .markdown h5 {
+    font-size: 0.95rem;
+  }
+
+  .markdown h6 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .markdown h1 {
+    font-size: 1.5rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.3rem;
+  }
+
+  .markdown h3 {
+    font-size: 1.15rem;
+  }
+
+  .markdown h4 {
+    font-size: 1rem;
+  }
+
+  .markdown h5 {
+    font-size: 0.9rem;
+  }
+
+  .markdown h6 {
+    font-size: 0.75rem;
+  }
+
+  .markdown p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+}
+
+/* Enhanced paragraph and text element spacing */
+.markdown p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  color: var(--ifm-font-color-base);
+}
+
+.markdown ul, .markdown ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive layout spacing */
+/* Tablet-specific optimizations */
+@media (min-width: 769px) and (max-width: 996px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .main-wrapper {
+    flex-direction: column;
+  }
+
+  .docSidebarContainer {
+    flex: 0 0 auto;
+    width: 100%;
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+
+  .docItemWrapper {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .pagination-nav {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .pagination-nav__item {
+    flex: 1;
+  }
+
+  .markdown table {
+    font-size: 0.9rem;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .alert {
+    padding: 0.9rem;
+    margin: 1.1rem 0;
+  }
+}
+
+@media (max-width: 996px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .markdown p {
+    margin-bottom: 1rem;
+    line-height: 1.65;
+  }
+
+  .markdown ul, .markdown ol {
+    margin: 0.8rem 0;
+    padding-left: 1.25rem;
+  }
+
+  .markdown li {
+    margin-bottom: 0.4rem;
+  }
+
+  .alert {
+    padding: 1rem;
+    margin: 1.25rem 0;
+  }
+
+  .code-block {
+    margin: 0.8rem 0;
+  }
+
+  .prism-code {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .markdown p {
+    margin-bottom: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .alert {
+    padding: 0.85rem;
+    margin: 1rem 0;
+  }
+
+  .navbar__items {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .markdown p {
+    margin-bottom: 0.75rem;
+    line-height: 1.55;
+  }
+
+  .alert {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+
+  .code-block, .prism-code {
+    font-size: 0.8rem;
+  }
+
+  .navbar__items {
+    gap: 0.5rem;
+  }
+
+  .navbar__search-input {
+    width: 150px;
+  }
+
+  .navbar__search-input:focus {
+    width: 200px;
+  }
+}
+
+.markdown strong {
+  font-weight: 600;
+}
+
+.markdown em {
+  font-style: italic;
+}
+
+.markdown blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--ifm-color-emphasis-700);
+  font-style: italic;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.markdown blockquote:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background-color: var(--ifm-color-primary);
+}
+
+/* Callout/danger/warning/success boxes */
+.alert {
+  border-radius: var(--ifm-global-radius);
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  position: relative;
+  border: none;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.alert--primary {
+  background-color: var(--ifm-color-primary-50);
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.alert--secondary {
+  background-color: var(--ifm-color-secondary-50);
+  border-left: 4px solid var(--ifm-color-secondary);
+}
+
+.alert--success {
+  background-color: var(--ifm-color-success-50);
+  border-left: 4px solid var(--ifm-color-success);
+}
+
+.alert--info {
+  background-color: var(--ifm-color-info-50);
+  border-left: 4px solid var(--ifm-color-info);
+}
+
+.alert--warning {
+  background-color: var(--ifm-color-warning-50);
+  border-left: 4px solid var(--ifm-color-warning);
+}
+
+.alert--danger {
+  background-color: var(--ifm-color-danger-50);
+  border-left: 4px solid var(--ifm-color-danger);
+}
+
+/* Enhanced code block styling */
+.code-block {
+  border-radius: var(--ifm-global-radius);
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  box-shadow: inset 0 0 0 1px var(--ifm-color-emphasis-200);
+}
+
+.prism-code {
+  border-radius: var(--ifm-global-radius);
+  padding: 1rem 1.25rem !important;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background: var(--ifm-code-background) !important;
+  overflow-x: auto;
+}
+
+.prism-code .token.comment {
+  color: #6a737d !important;
+}
+
+.prism-code .token.punctuation {
+  color: #24292e !important;
+}
+
+.prism-code .token.operator {
+  color: #d73a49 !important;
+}
+
+.prism-code .token.keyword {
+  color: #d73a49 !important;
+}
+
+.prism-code .token.function {
+  color: #6f42c1 !important;
+}
+
+.prism-code .token.string {
+  color: #032f62 !important;
+}
+
+.prism-code .token.number {
+  color: #005cc5 !important;
+}
+
+.prism-code .token.boolean {
+  color: #005cc5 !important;
+}
+
+/* Inline code styling */
+.markdown code {
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--ifm-color-primary);
+}
+
+/* Improved table styling */
+.markdown table {
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+  box-shadow: var(--ifm-global-shadow-lw);
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.markdown table th, .markdown table td {
+  padding: 0.85rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.markdown table th {
+  background-color: var(--ifm-color-emphasis-100);
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.markdown table tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown table tr:nth-child(even) {
+  background-color: var(--ifm-color-emphasis-50);
+}
+
+.markdown table tr:hover {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* Enhanced navbar with modern styling */
+.navbar {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--ifm-navbar-background-color);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.3s ease;
+}
+
+.navbar__inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar__items {
+  gap: 1.5rem;
+}
+
+.navbar__brand {
+  font-weight: 700;
+  color: var(--ifm-navbar-link-color);
+  transition: color 0.2s ease;
+}
+
+.navbar__brand:hover {
+  color: var(--ifm-color-primary);
+}
+
+.navbar__link {
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--ifm-global-radius);
+  transition: all 0.2s ease;
+}
+
+.navbar__link:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
+}
+
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-100);
+  font-weight: 600;
+}
+
+/* Mobile menu enhancements */
+.navbar-sidebar {
+  background-color: var(--ifm-background-surface-color);
+}
+
+.navbar-sidebar__brand {
+  padding: 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.navbar-sidebar__items {
+  padding: 1rem;
+}
+
+/* Search bar styling */
+.navbar__search-input {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background-color: var(--ifm-color-emphasis-100);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  width: 200px;
+}
+
+.navbar__search-input:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.2);
+  width: 250px;
+}
+
+/* Footer improvements */
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* High-resolution display support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  /* Improve text rendering on high-DPI displays */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Ensure images are crisp on high-DPI displays */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Enhance code blocks on high-DPI displays */
+  .prism-code {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
