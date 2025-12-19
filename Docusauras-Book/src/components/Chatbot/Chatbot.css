@@ -1,0 +1,255 @@
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: all 0.3s ease;
+   position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+}
+
+.chatbot-header {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 16px;
+  font-weight: bold;
+}
+
+.chatbot-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.selected-text-preview {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.selected-text-preview p {
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.ask-about-selection-btn {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.ask-about-selection-btn:hover {
+  background-color: #1e40af;
+}
+
+.chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #f9fafb;
+}
+
+.welcome-message {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  padding: 20px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 12px;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #2563eb;
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  border-bottom-left-radius: 0;
+}
+
+.message-content p {
+  margin: 0 0 8px 0;
+}
+
+.sources {
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.sources ul {
+  margin: 4px 0;
+  padding-left: 16px;
+}
+
+.sources li {
+  margin-bottom: 4px;
+}
+
+.sources a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.sources a:hover {
+  text-decoration: underline;
+}
+
+.supporting-passages {
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: rgba(37, 99, 235, 0.1);
+  border-radius: 4px;
+}
+
+.supporting-passages summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.supporting-passages ul {
+  margin-top: 8px;
+  padding-left: 16px;
+}
+
+.supporting-passages li {
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.passage-item {
+  background-color: rgba(37, 99, 235, 0.05);
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  border-left: 3px solid #2563eb;
+}
+
+.chatbot-input-area {
+  padding: 16px;
+  border-top: 1px solid #ddd;
+  background-color: white;
+  display: flex;
+  gap: 8px;
+}
+
+.chatbot-input-area textarea {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+  font-family: inherit;
+}
+
+.chatbot-input-area textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.send-button {
+  padding: 12px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.send-button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.send-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Close button in chatbot header */
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Open button when chatbot is closed */
+.open-button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.open-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive design for open button */
+@media (max-width: 768px) {
+  .chatbot-container {
+    height: 400px;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  .open-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
