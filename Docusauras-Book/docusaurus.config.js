@@ -83,15 +83,6 @@ const config = {
         redirects: [],
       },
     ],
-    // // SEO: Sitemap plugin
-    // [
-    //   "@docusaurus/plugin-sitemap",
-    //   {
-    //     changefreq: "weekly",
-    //     priority: 0.5,
-    //     filename: "sitemap.xml",
-    //   },
-    // ],
   ],
 
   themeConfig:

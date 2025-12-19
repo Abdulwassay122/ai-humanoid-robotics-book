@@ -4,7 +4,6 @@ import os
 from dotenv import load_dotenv
 from agents import enable_verbose_stdout_logging
 
-enable_verbose_stdout_logging()
 
 load_dotenv()
 set_tracing_disabled(disabled=True)
