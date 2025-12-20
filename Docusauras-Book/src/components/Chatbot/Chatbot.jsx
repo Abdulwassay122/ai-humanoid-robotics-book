@@ -70,7 +70,7 @@ const Chatbot = ({ pageUrl }) => {
       };
 
       // Call the backend API
-      const response = await fetch('http://localhost:8000/chat', {
+      const response = await fetch('https://aw122-hackathon-rag.hf.space/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
